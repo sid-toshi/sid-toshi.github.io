@@ -13,9 +13,6 @@ function onPayButtonPressed() {
     to: '0x332777864cce8879efe2356de27946b643be38d0', //your Ethereum address
     value: '0x'+value.toString(16), //the value of the transaction, as a '0x'-prefixed hex-encoded WEI integer
   }
-  console.log(ETHInput)
-  console.log(document.getElementById('ETHInput').value)
-  console.log(value)
   web3.eth.sendTransaction(transaction, (error, result) => {
     if (error) {
       //oh dear!
