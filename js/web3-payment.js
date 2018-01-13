@@ -10,7 +10,7 @@ if (typeof web3 !== 'undefined') {
 function onPayButtonPressed() {
   let value = 10000 //10,000 WEI
   let transaction = {
-    to: '0x...', //your Ethereum address
+    to: '0x332777864cce8879efe2356de27946b643be38d0', //your Ethereum address
     value: '0x'+value.toString(16), //the value of the transaction, as a '0x'-prefixed hex-encoded WEI integer
   }
 
