@@ -8,12 +8,12 @@ if (typeof web3 !== 'undefined') {
 
 
 function onPayButtonPressed(ETHAmount) {
-  let value = ETHAmount*1000000000000000000 //10,000 WEI
+  let value = ETHAmount*1000000000000000000 //In WEI
   let transaction = {
     to: '0x332777864cce8879efe2356de27946b643be38d0', //your Ethereum address
     value: '0x'+value.toString(16), //the value of the transaction, as a '0x'-prefixed hex-encoded WEI integer
   }
-
+  document.getElementById("ETHInput").innerHTML = "Paragraph changed.";
   web3.eth.sendTransaction(transaction, (error, result) => {
     if (error) {
       //oh dear!
