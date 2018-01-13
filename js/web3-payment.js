@@ -7,8 +7,8 @@ if (typeof web3 !== 'undefined') {
 }
 
 
-function onPayButtonPressed(ethvalue) {
-  let value = ethvalue*1000000000000000000 //In WEI
+function onPayButtonPressed() {
+  let value = document.getElementById("ETHInput").value*1000000000000000000 //In WEI
   let transaction = {
     to: '0x332777864cce8879efe2356de27946b643be38d0', //your Ethereum address
     value: '0x'+value.toString(16), //the value of the transaction, as a '0x'-prefixed hex-encoded WEI integer
