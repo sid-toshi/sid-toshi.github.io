@@ -14,6 +14,7 @@ function onPayButtonPressed() {
     value: '0x'+value.toString(16), //the value of the transaction, as a '0x'-prefixed hex-encoded WEI integer
   }
   console.log(ETHInput)
+  console.log(document.getElementById('ETHInput').value)
   console.log(value)
   web3.eth.sendTransaction(transaction, (error, result) => {
     if (error) {
